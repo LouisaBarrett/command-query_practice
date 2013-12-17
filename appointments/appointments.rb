@@ -1,15 +1,16 @@
 class Appointments
 
+  def initialize
+    @slots = []
+  end
+
   def earliest
-    @timeslot = []
+    @slots.min
   end
 
-  def at(input)
-    @timeslot
+  def schedule(appointment)
+    @slots << appointment
   end
 
 end
 
-class Time
-
-end

@@ -14,19 +14,19 @@ class AppointmentsTest < Minitest::Test
     # skip
     slots = Appointments.new
     t1 = Time.new(2014, 3, 14, 4, 30)
-    slots.at t1
+    slots.schedule t1
     assert_equal t1, slots.earliest
   end
 
   def test_earliest_of_several
-    skip
+    # skip
     slots = Appointments.new
     t1 = Time.new(2014, 6, 14, 16, 30)
     t2 = Time.new(2014, 2, 28, 11)
     t3 = Time.new(2014, 2, 28, 8, 30)
-    slots.at t1
-    slots.at t2
-    slots.at t3
+    slots.schedule t1
+    slots.schedule t2
+    slots.schedule t3
     assert_equal t3, slots.earliest
   end
 end
