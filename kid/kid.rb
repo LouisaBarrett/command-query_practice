@@ -1,20 +1,19 @@
 class Kid
 
   def initialize
-    @grams_candy = 0
-    @hyper = false
+    @grams_of_sugar_eaten = 0
   end
 
   def grams_of_sugar_eaten
-    @grams_candy
+    @grams_of_sugar_eaten
   end
 
   def eat_candy
-    @grams_candy += 5
+    @grams_of_sugar_eaten += 5
   end
 
   def hyperactive?
-    eat_candy > 60
+    @grams_of_sugar_eaten >= 60
   end
 
 end
